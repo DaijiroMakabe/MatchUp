@@ -1,0 +1,562 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f7f7f7;
+}
+
+.wrapper {
+  background: #fff;
+  width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0, 1),
+              0 32px 64px -48px rgba(0, 0, 0, 0, 5)
+}
+
+.complete {
+  width: 650px;
+}
+
+/* Signup form CSS Code */
+.form {
+  padding: 25px 30px;
+}
+.form header {
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.form form {
+  margin: 20px 0;
+}
+.form form .error-txt {
+  color: #721c24;
+  background: #f8d7da;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #f5c6cb;
+}
+
+.form form .field {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form form .field  label {
+  margin-bottom: 2px;
+}
+.form form .field input {
+  outline: none;
+}
+
+.form form .input input {
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form form .image input {
+  border: none;
+  padding-top: 10px;
+}
+.form form .button input {
+  margin-top: 13px;
+  height: 45px;
+  border: none;
+  font-size: 17px;
+  font-weight: ４00;
+  background: blue;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form form .field i {
+  position: absolute;
+  right: 15px;
+  color: #ccc;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.select-box {
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form .link {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 17px;
+} 
+.form .link a {
+  color: #333;
+}
+.form .link a:hover {
+  text-decoration: underline;
+}
+/* Login form CSS Code */
+.login-input {
+  padding-bottom: 20px;
+}
+
+/* Chat Area CSS Code */
+.chat-background {
+  /* background-color: pink; */
+  /* height: 100vh; */
+  margin: 0 auto;
+}
+
+.chat-area header {
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+}
+.chat-area header .back-icon {
+  font-size: 18px;
+  color: #333;
+}
+.chat-area header img {
+  height: 50px;
+  width: 45px;
+  margin: 0 15px;
+  border-radius: 50%;
+}
+.chat-area header span {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.chat-box {
+  height: 500px;
+  overflow-y: auto;
+  background: #87CEFA;
+  padding: 10px 30px 20px 30px;
+  box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+              inset 0 32px 32px -32px rgb(0 0 0 / 5%);
+}
+.chat-box .chat {
+  margin: 15px 0;
+}
+.chat-box .chat p {
+  word-wrap: break-word;
+  padding: 8px 16px;
+  box-shadow: inset 0 0 32px rgb(0 0 0 / 8%),
+              inset 0 16px 16px -16px rgb(0 0 0 / 10%);
+}
+.chat-box .outgoing {
+  display: flex;
+}
+.outgoing .details {
+  margin-left: auto;
+  max-width: calc(100% - 130px);
+}
+.outgoing .details p {
+  color: #333;
+  background: #43FF6B;
+  border-radius: 18px 18px 0 18px;
+}
+.chat-box .incoming {
+  display: flex;
+  align-items: flex-end;
+}
+.chat-box .incoming img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+.incoming .details {
+  margin-left: 10px;
+  margin-right: auto;
+  max-width: calc(100% - 130px);
+}
+
+.incoming .details p {
+  color: #333;
+  background: #fff;
+  border-radius: 18px 18px 18px 0;
+}
+.chat-area .typing-area {
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.typing-area input {
+  height: 45px;
+  width: calc(100% - 58px);
+  font-size: 17px;
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.typing-area button {
+  width: 55px;
+  border: none;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  color: blue;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+/* Main Page CSS Code */
+#header-nav {
+  margin-left: auto;
+}
+/* ユーザーヘッダー */
+.users header {
+  margin: 0 auto;
+}
+#profile,
+.users header,
+.users-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e6e6e6;
+}
+.logo {
+  object-fit: cover;
+  /* border-radius: 50%; */
+}
+.users header .content,
+.users-list a .content {
+  display: flex;
+}
+.users header .content img {
+  height: 50px;
+  width: 50px;
+}
+.users header .details,
+.users-list .details {
+  margin-left: 15px;
+}
+.users header .details span{
+  font-size: 18px;
+  font-weight: 500;
+}
+.users header .logout {
+  color: #fff;
+  font-size: 17px;
+  padding: 7px 15px;
+  background: #333;
+  border-radius: 5px;
+}
+
+
+/* Search area CSS*/
+#search-all {
+  margin: 0 auto;
+}
+
+.users .search {
+  margin: 20px 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+.users .search .text {
+  font-size: 18px;
+}
+.users .search input {
+  position: absolute;
+  height: 42px;
+  width: calc(100% - 50px);
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  font-size: 16px;
+  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
+  outline: none;
+}
+.users .search button {
+  width: 47px;
+  height: 42px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #333;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 0 5px 5px 0;
+}
+/* Tab area CSS */
+.tab-all {
+  /* width: 80%; */
+  margin: 0 auto;
+}
+.tab-all ul {
+  background-color: #00FFFF;
+}
+.page-title {
+  text-align: center;
+  padding-top: 10px;
+}
+.page-title h1 {
+  margin: 0;
+  font-size: 20px;
+}
+/* Users List CSS */
+#list-all {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.users-list {
+  max-height: 350px;
+  overflow-y: auto;
+}
+.users-list .details {
+  margin-top: 15px;
+  width: 100%;
+}
+.users-list .details span {
+  padding-left: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+.users-list::-webkit-scrollbar {
+  width: 0px;
+}
+
+.users-list a {
+  width: 100%;
+  padding-right: 15px;
+  margin-bottom: 15px;
+  page-break-after: 10px;
+  border-bottom-color: #f1f1f1;
+  text-decoration: none;
+  align-items: center;
+}
+
+.users-list .content a img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.friend-btn {
+  width: 80%;
+}
+.friend-btn input {
+  width: 70%;
+  margin: 5px;
+  /* margin-top: 15px; */
+  margin-right: 10px;
+  border: none;
+}
+.nav-paging {
+  padding: 30px;
+}
+
+.changed {
+  opacity: 0.5;
+}
+
+/* footer CSS Code */
+/* footer page */
+.footer {
+  margin-top: 40px;
+  border-top: 2px solid #bfbfbf;
+  bottom: 0;
+}
+.footer p {
+  font-size: 12px;
+  text-align: right;
+  color: #333;
+  padding: 10px;
+}
+
+/* Mypage CSS Code */
+#profile {
+  position: relative;
+   margin-top: 15px;
+   padding: 0;
+   margin-left: auto;
+   margin-right: auto;
+}
+#profile header {
+  background-color: #efefef;
+  width: 100%;
+}
+.profile-img {
+  /* margin-right: 50px; */
+  margin-left: auto;
+  padding: 20px;
+}
+.profile-img img {
+  border-radius: 50%;
+}
+.profile-img h1 {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.main-profile {
+  margin-right: auto;
+}
+.main-profile span {
+  /* padding: 10px; */
+  width: 250px;
+  margin-top: 10px;
+}
+.edit-profile {
+  position: fixed;
+  width: 250px;
+  display: flex;
+  margin-bottom: auto;
+  margin-left: auto;
+  left: 30%;
+  top: 85px;
+
+}
+.edit-profile p,
+.edit-profile a {
+  font-size: 13px;
+  padding: 5px;
+}
+.switch {
+  display: flex; 
+  margin-top: auto;
+  margin-bottom: 10px;
+
+}
+.switch button {
+  position:-webkit-sticky;
+  position: sticky;
+  margin-right: 5px;
+  margin-right: 10px;
+}
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+.card-title {
+  margin-bottom: 0.75rem;
+}
+.card-subtitle {
+  margin-top: -0.375rem;
+  margin-bottom: 0;
+}
+.card-text:last-child {
+  margin-bottom: 0;
+}
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  margin-top: 50px;
+}
+.card-height {
+  height: 91%;
+}
+.schedule-link {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* History page CSS Code  */
+.history h1 {
+  margin-top: 20px;
+  text-align: center;
+}
+.history-count {
+  /* display: flex; */
+  padding-top: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+.point-count {
+  font-size: 20px;
+  width: 100%;
+  text-align: right;
+}
+
+/* Schedule page CSS Code  */
+.schedule h1{
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.more-btn {
+  text-align: center;
+}
+.more-btn button {
+  width: 250px;
+}
+/* Friend page CSS Code  */
+.friend-btn {
+  text-align: center;
+}
+.friend-btn a {
+  margin-top: 5px;
+  width: 250px;
+  border: 1px solid;
+}
+.switch form {
+  padding: 5px;
+}
+.signupsuccess {
+  font-size: 10px;
+}
+/* Responsive design  */
+@media screen and (max-width: 550px) {
+	/* 550px以下に適用されるCSS（スマホ用） */
+  .users-list .details span {
+    font-size: 13px;  
+  }
+  .main-profile span {
+    font-size: 11px;
+  }
+  .switch button {
+    font-size: 10px;
+    display: inline-block;
+  } 
+  .table, th, td {
+    font-size: 13px;
+  }
+  .history h1 {
+    font-size: 18px;
+  }
+  .schedule h1 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 830px) {
+  .main-profile span {
+    font-size: 11px;
+  }
+  .switch button {
+    font-size: 10px;
+    display: inline-block;
+  } 
+ }
