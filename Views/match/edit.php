@@ -36,7 +36,7 @@ function h($str) {
  
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper complete">
   <?php require_once('header.php')?>
     <section class="form signup">
       <header>
@@ -57,7 +57,7 @@ function h($str) {
             <label>チームネーム</label>
             <input type="text" name="team_name" value="<?=h($login_user['team_name']) ?>" placeholder="チームネームを入力してください">
           </div>
-          <div class="profile-img">
+          <!-- <div class="profile-img"> -->
             <div class="field input">
               <label>監督者ネーム</label>
               <input type="text" name="user_name" value="<?=h($login_user['user_name']) ?>" placeholder="監督者氏名を入力してください">
@@ -67,7 +67,7 @@ function h($str) {
               <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
               <input type="file" name="image" accept="image/*">
           </div>
-          </div>
+          <!-- </div> -->
           <div class="field input">
             <label>メールアドレス</label>
             <input type="text" name="mail" value="<?=h($login_user['mail']) ?>" placeholder="メールアドレスを入力してください">

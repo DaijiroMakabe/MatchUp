@@ -43,7 +43,7 @@ if (is_null($_POST["end_time"]) || $_POST["end_time"] === "" ) {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper complete">
   <?php require_once('header.php')?>
     <section class="form signup">
       <header>

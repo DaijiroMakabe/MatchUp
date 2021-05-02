@@ -148,7 +148,24 @@ public function find_baseball_users($page = 0):Array {
     $this->dbh->rollback();// 例外発生時に処理をなかったっ事にする
     exit('データベースに接続できませんでした。' . $e->getMessage());
   }
-      return $result;
+  if ($result) {
+    return $result;
+  }
+      else if (!$result) {
+        try {
+          $this->dbh->beginTransaction(); // トランザクションの開始
+          $sql = 'SELECT DISTINCT * FROM users WHERE category = "野球"';
+          $sth = $this->dbh->prepare($sql);
+          // SQL結果を受け取る
+          $sth->execute();
+          $data = $sth->fetchall(PDO::FETCH_ASSOC);
+          $this->dbh->commit();
+        } catch (PDOException $e) {
+          $this->dbh->rollback();// 例外発生時に処理をなかったっ事にする
+          exit('データベースに接続できませんでした。' . $e->getMessage());
+        }
+        return $data;
+      }
 }
 // // テーブルからサッカーカテゴリーのuserデータを全て表示する
 // // @param string 
@@ -167,7 +184,24 @@ public function find_soccer_users($page = 0):Array {
     $this->dbh->rollback();// 例外発生時に処理をなかったっ事にする
     exit('データベースに接続できませんでした。' . $e->getMessage());
   }
-      return $result;
+  if ($result) {
+    return $result;
+  }
+  else if (!$result) {
+    try {
+      $this->dbh->beginTransaction(); // トランザクションの開始
+      $sql = 'SELECT DISTINCT * FROM users WHERE category = "サッカー"';
+      $sth = $this->dbh->prepare($sql);
+      // SQL結果を受け取る
+      $sth->execute();
+      $data = $sth->fetchall(PDO::FETCH_ASSOC);
+      $this->dbh->commit();
+    } catch (PDOException $e) {
+      $this->dbh->rollback();// 例外発生時に処理をなかったっ事にする
+      exit('データベースに接続できませんでした。' . $e->getMessage());
+    }
+    return $data;
+  }
 }
 // // テーブルからバスケットボールカテゴリーのuserデータを全て表示する
 // // @param string 
@@ -186,7 +220,24 @@ public function find_basketball_users($page = 0):Array {
     $this->dbh->rollback();// 例外発生時に処理をなかったっ事にする
     exit('データベースに接続できませんでした。' . $e->getMessage());
   }
-      return $result;
+  if ($result) {
+    return $result;
+  }
+  else if (!$result) {
+    try {
+      $this->dbh->beginTransaction(); // トランザクションの開始
+      $sql = 'SELECT DISTINCT * FROM users WHERE category = "バスケットボール"';
+      $sth = $this->dbh->prepare($sql);
+      // SQL結果を受け取る
+      $sth->execute();
+      $data = $sth->fetchall(PDO::FETCH_ASSOC);
+      $this->dbh->commit();
+    } catch (PDOException $e) {
+      $this->dbh->rollback();// 例外発生時に処理をなかったっ事にする
+      exit('データベースに接続できませんでした。' . $e->getMessage());
+    }
+    return $data;
+  }
 }
 // // テーブルから友達データを表示する
 // // @param string 

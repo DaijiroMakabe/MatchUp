@@ -78,8 +78,8 @@ function h($str) {
               <span>年代    ：<?=h($friend['age']) ?><br></span>
               <span>エリア  ：<?=h($friend['region']) ?><br></span>        
       </div> 
-      
           <div class="switch">
+      <?php if (!empty($_SESSION["login_user"]['id'])):?>
             <form name="add_friend" action="friend.php" method="POST">
               <button id="app_btn" type="submit" value="友達申請"  class="btn btn-primary btn-sm">友達申請</button>
               <input name="add_friend" type="hidden" value="<?=$friend['id'] ?>" class="btn btn-primary btn-sm"></input>
@@ -88,8 +88,8 @@ function h($str) {
               <button id="del_btn" type="submit" value="申請削除"  class="btn btn-success btn-sm">友達削除</button>
               <input name="delete_friend" type="hidden" value="<?=$friend['id'] ?>" class="btn btn-primary btn-sm"></input>
             </form>
+            <?php endif; ?>
             <?php endforeach; ?>
-
           </div>
          
         </header> 

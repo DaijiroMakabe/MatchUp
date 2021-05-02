@@ -41,6 +41,13 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
   }
 ?>
+<?php 
+if (isset($_SESSION["login_user"]['id'])) {
+  session_destroy();
+}
+?>
+<!-- <?php var_dump($_SESSION["login_user"]['id']);?> -->
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>

@@ -9,6 +9,7 @@
         <ul id="header-nav" class="navbar-nav">
           <li class="nav-item"><a href="mypage.php" class="nav-link">マイページ</a></li>
           <li class="nav-item"><a href="main.php" class="nav-link">トップページ</a></li>
+          <li class="nav-item"><a href="login.php?id=<?=$_SESSION["login_user"]['id'] ?>" class="nav-link">ログアウト</a></li>
         </ul>
       </div>
     </nav>

@@ -1,8 +1,8 @@
 <?php session_start();?>
 <?php 
-if(is_null($_SESSION["login_user"]['id'])) {
-  header('Location: login.php');
-}
+// if(is_null($_SESSION["login_user"]['id'])) {
+//   header('Location: login.php');
+// }
 ?>
 <?php 
 require_once(ROOT_PATH . 'Controllers/matchController.php');
