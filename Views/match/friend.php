@@ -32,7 +32,6 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
   }
 ?>
-<?php var_dump($_SESSION['friend']);?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
