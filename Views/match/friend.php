@@ -21,6 +21,8 @@ if (isset($_POST['delete_friend'])) {
 }
 if(isset($_POST['friend_profile'])) {
   $_SESSION['friend'] = $_POST['friend_profile'];
+  $params_result = $game->show_friend_result();
+  // header('Location: friend.php');
   // echo  $_SESSION['friend'];
 }
 ?>
@@ -30,6 +32,7 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
   }
 ?>
+<?php var_dump($_SESSION['friend']);?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
