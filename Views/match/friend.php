@@ -6,7 +6,7 @@ $params_friend = $game->show_friend();
 $params_btn = $game->show_friendbtn();
 $params_result = $game->show_friend_result();
 $params_myfriend = $game->show_myfriend();
-
+// var_dump($_SESSION["login_user"]['id']);
 if (isset($_POST['add_friend'])) {
   // var_dump($_POST['add_friend']);
   $game->make_friend();
@@ -32,6 +32,7 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
   }
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>

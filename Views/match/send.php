@@ -44,6 +44,7 @@ if (isset($_POST['reset-password-submit'])) {
         } else if ($tokenCheck === true) {
           $tokenEmail = $new_pwd['pwdResetEmail'];
           var_dump($new_pwd['pwdResetEmail']);
+          var_dump($password);
           $newPwdHash = password_hash($password, PASSWORD_DEFAULT);
           $update = $game->find_pwd_user($tokenEmail, $newPwdHash);
           if ($update) {

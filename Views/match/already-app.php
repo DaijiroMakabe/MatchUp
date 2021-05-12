@@ -1,5 +1,6 @@
+<?php session_start();?>
 <?php 
-if(is_null($_SESSION["login_user"]['id'])) {
+if(!isset($_SESSION["login_user"]['id'])) {
   header('Location: login.php');
 }
 ?>

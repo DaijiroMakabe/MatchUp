@@ -103,7 +103,7 @@ public function find_my_result($page = 0):Array {
 public function find_friend_result($page = 0):Array {
   try {
   $this->dbh->beginTransaction(); // トランザクションの開始
-  $sql = 'SELECT date, team_name, my_goals, enemy_goals, result FROM result JOIN users ON users.id = result.my_user_id WHERE enemy_user_id = :enemy_user_id ORDER BY date';
+  $sql = 'SELECT date, team_name, my_goals, enemy_goals, result FROM result JOIN users ON users.id = result.enemy_user_id WHERE my_user_id = :enemy_user_id ORDER BY date';
   $sth = $this->dbh->prepare($sql);
   $sth->bindParam(':enemy_user_id',$_SESSION['friend'], PDO::PARAM_INT);
   // SQL結果を受け取る
